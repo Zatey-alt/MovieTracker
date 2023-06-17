@@ -1,0 +1,79 @@
+/* Center everything */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+  }
+  
+  /* Style the login link */
+  a {
+    display: flex;
+    padding: 10px 20px;
+    margin-top: 100px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    width: 200px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
+    justify-items: center;
+    font-size: 24px;
+    border-radius: 20px;
+    
+  }
+  
+  /* Add hover effect to login link */
+  a:hover {
+    background-color: #000000;
+    color: #d50b0b;
+    border: 2px solid #d50b0b;
+  }
+  .image img{
+    width: 400px;
+  }
+  
+  /* Animate the welcome message */
+  h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Keyframe animation for welcome message */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animate the login button */
+  a {
+    animation: slideInFromBottom 1s ease-in-out;
+  }
+  
+  /* Keyframe animation for login button */
+  @keyframes slideInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

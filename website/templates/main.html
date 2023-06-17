@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+  </head>
+  <body>
+    {% if message %}
+    <h1>{{ message }}</h1>
+    {% endif %}
+    <h2>Main Page</h2>
+    <!-- Your content here -->
+  </body>
+</html>

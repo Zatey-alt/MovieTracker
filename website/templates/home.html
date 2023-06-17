@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+	<title>MovieTracker</title>
+	<style>
+		html{
+			background: black;
+		}
+		h1{
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="image">
+		<img src="/static/assets/image.png" alt="">
+
+	</div>
+	<h1>Discover All Your Favoriteshows & Movies</h1>
+	
+    <a href="{{ url_for('auth.login') }}">Search</a> 
+	<p>
+	</p>
+</body>
+</html>
