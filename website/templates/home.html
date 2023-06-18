@@ -15,12 +15,21 @@
 <body>
 	<div class="image">
 		<img src="/static/assets/image.png" alt="">
-
 	</div>
-	<h1>Discover All Your Favoriteshows & Movies</h1>
+	<h1>Discover All Your Favorite Shows & Movies</h1>
 	
     <a href="{{ url_for('auth.login') }}">Search</a> 
 	<p>
-	</p>
+    {% for movie in current_user.movies %}
+    <div class="movie">
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+        <a href="{{ url_for('views.update_movie', id=movie.id) }}">Update</a>
+        <a href="{{ url_for('views.delete_movie', id=movie.id) }}">Delete</a>
+    </div>
+    {% endfor %}
+    </p>
+    <a href="{{ url_for('views.add_movie') }}">Add Movie</a>
 </body>
 </html>
+

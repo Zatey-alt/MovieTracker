@@ -8,3 +8,10 @@ class User(db.Model,UserMixin):
     password = db.Column(db.String(150))
     username = db.Column(db.String(150))
 
+class Movie(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(150), nullable=False)
+    description = db.Column(db.String(500))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+User.movies = db.relationship('Movie', backref='user', lazy='dynamic')
